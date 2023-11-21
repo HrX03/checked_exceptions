@@ -5,12 +5,12 @@ import 'package:checked_exceptions/checked_exceptions.dart';
 void main(List<String> args) {
   final dynamic result;
 
+  // change the type of the catch or remove the try/catch to see lint
   try {
     result = decodeJson('{"a: 0}');
-  } on int {
+  } on FormatException {
     print("fail :(");
     return;
-
   }
 
   print(result);
